@@ -1,0 +1,9 @@
+services:
+  tailwindcss:
+    image: node:latest
+    container_name: tailwindcss
+    hostname: node_enviroment_tailwind
+    working_dir: /app
+    volumes:
+      - ./:/app
+    entrypoint: /bin/bash -c "npm install -D tailwindcss && tail -f /dev/null"
